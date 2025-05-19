@@ -4,20 +4,20 @@ import { useEffect, useState } from "react";
 import { getProductsByCategory } from "../services/products.service";
 
 const Category = () => {
-  const [products, setProducts] = useState([]);
-  const { id } = useParams();
+    const [products, setProducts] = useState([]);
+    const { id } = useParams();
 
-  useEffect(() => {
-    getProductsByCategory(id)
-      .then((res) => {
-        setProducts(res.data.products);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, [id]);
+    useEffect(() => {
+        getProductsByCategory(id)
+            .then((res) => {
+                setProducts(res.data.products);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }, [id]);
 
-  return <ItemListContainer products={products} />;
+    return <ItemListContainer products={products} />;
 };
 
 export default Category;

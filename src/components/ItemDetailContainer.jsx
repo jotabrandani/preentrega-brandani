@@ -1,35 +1,3 @@
-//const ItemDetailContainer = () => {
-//    return(<>ItemDetail</>)
-//}
-
-//export default ItemDetailContainer;
-
-// import { Flex, Image, Text, Button, Heading } from "@chakra-ui/react";
-
-// const ItemDetailContainer = ({ product }) => {
-//     console.log(product);
-//     return (
-//         <Flex>
-//             {product.images ? (
-//                 <Image
-//                     src={product.images[0]}
-//                     width={"20%"}
-//                     height={"300px"}
-//                     objectFit={"content"}
-//                 />
-//             ) : null}
-//             <Flex flexDir={'column'}>
-//                 <Heading>{product.title}</Heading>
-//                 <Text fontSize={'1rem'}>{product.description}</Text>
-//                 <Text>{product.price}</Text>
-//                 <Button>Agregar producto</Button>
-//             </Flex>
-//         </Flex>
-//     );
-// };
-
-// export default ItemDetailContainer;
-
 import {
     Box,
     Container,
@@ -76,13 +44,14 @@ const ItemDetailContainer = ({ product }) => {
                             lineHeight={1.1}
                             fontWeight={600}
                             fontSize={{ base: "2xl", sm: "4xl", lg: "5xl" }}
+                            marginBottom={10}
                         >
                             {product.title}
                         </Heading>
                         <Text
                             color={useColorModeValue("gray.900", "gray.400")}
-                            fontWeight={300}
-                            fontSize={"2xl"}
+                            fontWeight={400}
+                            fontSize={"3xl"}
                         >
                             ${product.price}
                         </Text>

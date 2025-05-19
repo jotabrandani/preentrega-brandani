@@ -4,15 +4,15 @@ import ItemListContainer from "../components/ItemListContainer";
 
 const Home = () => {
 
-  const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    getAllProducts().then((res) => {
-      setProducts(res.data.products);
-    });
-  }, []);
+    useEffect(() => {
+        getAllProducts().then((res) => {
+            setProducts(res.data.products);
+        });
+    }, []);
 
-  return <ItemListContainer products={products}/>;
+    return <ItemListContainer products={products} />;
 };
 
 export default Home;
