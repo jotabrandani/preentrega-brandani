@@ -5,14 +5,17 @@ import ItemListContainer from "../components/ItemListContainer";
 const Home = () => {
 
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         getAllProducts().then((res) => {
             setProducts(res.data.products);
-        });
+        })
+        .catch((error) => console.error(error))
+        .finally(() => setLoading(false));
     }, []);
 
-    return <ItemListContainer products={products} />;
+    return loading ? <>Loading . . .</> : <ItemListContainer products={products} />;
 };
 
 export default Home;

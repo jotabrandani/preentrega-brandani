@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout";
 import Item from "../pages/Item";
 import Category from "../pages/Category";
 import NotFound from "../pages/NotFound";
+import Memo from "../pages/Memo";
 
 
 const routes = [
@@ -18,7 +19,7 @@ const routes = [
             },
             {
                 path: "/item/:id",
-                element: <Item/>,
+                element: <Item />,
             },
             {
                 path: "/category/:id",
@@ -28,10 +29,13 @@ const routes = [
                 path: "*",
                 element: <NotFound />,
             },
+            {
+                path: '/memo',
+                element: <Memo />
+            },
 
         ]
     },
-
 
 ];
 

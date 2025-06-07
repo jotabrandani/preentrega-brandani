@@ -15,6 +15,7 @@ import {
     ListItem,
 } from "@chakra-ui/react";
 import { MdLocalShipping } from "react-icons/md";
+import ItemCount from "./ItemCount";
 
 const ItemDetailContainer = ({ product }) => {
     console.log(product);
@@ -134,22 +135,7 @@ const ItemDetailContainer = ({ product }) => {
                         </Box> */}
                     </Stack>
 
-                    <Button
-                        rounded={"none"}
-                        w={"full"}
-                        mt={8}
-                        size={"lg"}
-                        py={"7"}
-                        bg={useColorModeValue("gray.900", "gray.50")}
-                        color={useColorModeValue("white", "gray.900")}
-                        textTransform={"uppercase"}
-                        _hover={{
-                            transform: "translateY(2px)",
-                            boxShadow: "lg",
-                        }}
-                    >
-                        Agregar al carrito
-                    </Button>
+                    <ItemCount product={product} />
 
                     <Stack direction="row" alignItems="center" justifyContent={"center"}>
                         <MdLocalShipping />
