@@ -5,7 +5,7 @@ import Item from "../pages/Item";
 import Category from "../pages/Category";
 import NotFound from "../pages/NotFound";
 import Memo from "../pages/Memo";
-
+import AddDoc from "../pages/AddDoc";
 
 const routes = [
 
@@ -24,6 +24,10 @@ const routes = [
             {
                 path: "/category/:id",
                 element: <Category />,
+            },
+            {
+                path: "/add-doc",
+                element: <AddDoc />,
             },
             {
                 path: "*",

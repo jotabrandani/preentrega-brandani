@@ -10,7 +10,7 @@ const ItemCard = ({ id, image, title, description, price, discount }) => {
             width={"300px"}
             borderWidth={"1px"}
             borderRadius={"lg"}
-            color={"white"}
+            
             transition="transform 0.3s, box-shadow 0.3s"
             _hover={{ transform: "translateY(-5px)", boxShadow: "lg" }}
             onClick={() => navigate(`/item/${id}`)}
@@ -23,8 +23,8 @@ const ItemCard = ({ id, image, title, description, price, discount }) => {
                 <Text noOfLines={2} mb={4} color="gray.400">
                     {description}
                 </Text>
-                <Text fontSize={"18px"}>${price}</Text>
-                <Text fontSize={"18px"}>${priceAfterDiscount}</Text>
+                <Text fontSize={"18px"} color='gray.800'>$ {price}</Text>
+                <Text fontSize={"18px"} color='gray.800'>$ {priceAfterDiscount}</Text>
             </Box>
         </Box>
     );
